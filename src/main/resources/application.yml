@@ -1,0 +1,23 @@
+## Application related configuration
+spring:
+  application:
+    name: springboot_micro_database
+
+## Server related configuration
+server:
+  port: 2222
+
+
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/springboot_micro_server/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+      duration: 5
+
+
